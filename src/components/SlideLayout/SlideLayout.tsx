@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 import { DecorativeBackground, type DecorativeBackgroundVariant } from '../DecorativeBackground';
 import { Navigation } from '../Navigation';
 import { ProgressBar } from '../ProgressBar';
@@ -32,7 +32,14 @@ export function SlideLayout({
   decorVariant = 'default',
   children,
 }: SlideLayoutProps) {
+  const contentRef = useRef<HTMLElement>(null);
   const resolvedDecorVariant = slideNumber === 3 ? 'matte' : decorVariant;
+
+  useEffect(() => {
+    if (isActive) {
+      contentRef.current?.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+  }, [isActive]);
 
   return (
     <section
@@ -47,7 +54,9 @@ export function SlideLayout({
         <SlideNumber current={slideNumber} total={totalSlides} />
       </header>
 
-      <main className={styles.content}>{children}</main>
+      <main ref={contentRef} className={styles.content}>
+        {children}
+      </main>
 
       <footer className={styles.footer}>
         <ProgressBar current={slideNumber} total={totalSlides} />

@@ -51,6 +51,8 @@
   --line-height-relaxed: 1.55;
 
   /* Spacing & Layout */
+  --slide-viewport-height: 100vh;
+  --slide-viewport-height: 100dvh;
   --slide-padding-x: clamp(1.25rem, 5vw, 4.5rem);
   --slide-padding-y: clamp(1rem, 3vh, 2rem);
   --slide-header-height: 3.5rem;

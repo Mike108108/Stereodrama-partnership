@@ -20,7 +20,9 @@ export default function App() {
     goNext,
     goPrev,
     handleTouchStart,
+    handleTouchMove,
     handleTouchEnd,
+    handleTouchCancel,
     canGoNext,
     canGoPrev,
   } = usePresentation();
@@ -29,7 +31,9 @@ export default function App() {
     <div
       className={styles.presentation}
       onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleTouchCancel}
     >
       {slideComponents.map((SlideComponent, index) => (
         <SlideLayout
