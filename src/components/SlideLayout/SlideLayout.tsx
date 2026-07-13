@@ -59,7 +59,9 @@ export function SlideLayout({
       </main>
 
       <footer className={styles.footer}>
-        <ProgressBar current={slideNumber} total={totalSlides} />
+        <div className={styles.progressBar}>
+          <ProgressBar current={slideNumber} total={totalSlides} />
+        </div>
         <Navigation
           currentIndex={currentIndex}
           total={totalSlides}

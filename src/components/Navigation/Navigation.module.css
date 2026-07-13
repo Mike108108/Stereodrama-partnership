@@ -58,6 +58,21 @@
   transform: scale(1.2);
 }
 
+@media (max-width: 820px) {
+  .nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .dots {
+    justify-self: center;
+    grid-column: 2;
+  }
+}
+
 @media (max-width: 480px) {
   .dots {
     gap: 6px;

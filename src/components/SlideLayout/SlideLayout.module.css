@@ -69,7 +69,7 @@
     overscroll-behavior-y: contain;
     overscroll-behavior-x: none;
     justify-content: flex-start;
-    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0));
+    padding-bottom: 30px;
   }
 
   .content > * {
@@ -78,14 +78,23 @@
   }
 
   .footer {
-    padding-bottom: env(safe-area-inset-bottom, 0);
-  }
-}
-
-@media (max-width: 640px) {
-  .footer {
-    flex-direction: column-reverse;
+    width: 100%;
     align-items: stretch;
-    gap: 0.75rem;
+    justify-content: stretch;
+    padding-top: 15px;
+    padding-left: clamp(0.75rem, 3vw, 1rem);
+    padding-right: clamp(0.75rem, 3vw, 1rem);
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0));
+    border: 1px solid var(--color-line-accent);
+    border-radius: var(--card-radius);
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow:
+      0 0 0 1px rgba(57, 255, 20, 0.05),
+      0 0 18px rgba(57, 255, 20, 0.1),
+      inset 0 0 20px rgba(57, 255, 20, 0.02);
+  }
+
+  .progressBar {
+    display: none;
   }
 }
