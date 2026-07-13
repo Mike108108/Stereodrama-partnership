@@ -62,15 +62,17 @@ export function SlideLayout({
         <div className={styles.progressBar}>
           <ProgressBar current={slideNumber} total={totalSlides} />
         </div>
-        <Navigation
-          currentIndex={currentIndex}
-          total={totalSlides}
-          onGoTo={onGoTo}
-          onNext={onNext}
-          onPrev={onPrev}
-          canGoNext={canGoNext}
-          canGoPrev={canGoPrev}
-        />
+        <div className={styles.controlBlock}>
+          <Navigation
+            currentIndex={currentIndex}
+            total={totalSlides}
+            onGoTo={onGoTo}
+            onNext={onNext}
+            onPrev={onPrev}
+            canGoNext={canGoNext}
+            canGoPrev={canGoPrev}
+          />
+        </div>
       </footer>
     </section>
   );
