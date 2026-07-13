@@ -1,0 +1,91 @@
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-decor);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glowTop,
+.glowBottom {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  transition: transform var(--transition-slow);
+}
+
+.glowTop {
+  width: 60%;
+  height: 50%;
+  top: -15%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(57, 255, 20, 0.12) 0%, transparent 70%);
+}
+
+.glowBottom {
+  width: 50%;
+  height: 40%;
+  bottom: -10%;
+  left: -10%;
+  background: radial-gradient(circle, rgba(26, 143, 10, 0.1) 0%, transparent 70%);
+}
+
+.ring {
+  position: absolute;
+  width: clamp(300px, 50vw, 600px);
+  height: clamp(300px, 50vw, 600px);
+  border: 1px solid rgba(57, 255, 20, 0.08);
+  border-radius: 50%;
+  top: 50%;
+  right: -15%;
+  transform: translateY(-50%);
+  transition: transform var(--transition-slow);
+}
+
+.ringSmall {
+  position: absolute;
+  width: clamp(150px, 25vw, 300px);
+  height: clamp(150px, 25vw, 300px);
+  border: 1px solid rgba(57, 255, 20, 0.05);
+  border-radius: 50%;
+  bottom: 15%;
+  left: 5%;
+  transition: transform var(--transition-slow);
+}
+
+.center .glowTop {
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right .ring {
+  right: 5%;
+}
+
+/* Slide 1 — clean matte background, no rings */
+.gradient {
+  background: #0b0c0c;
+}
+
+/* Slide 2 — clean matte background, no rings */
+.matte {
+  background: #0b0c0c;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bg:hover .ring {
+    transform: translateY(-50%) translateX(-10px);
+  }
+
+  .bg:hover .ringSmall {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .ring,
+  .ringSmall {
+    opacity: 0.5;
+  }
+}

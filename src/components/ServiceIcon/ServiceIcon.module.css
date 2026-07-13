@@ -1,0 +1,22 @@
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.icon :global(svg) {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.lucide {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: inherit;
+}

@@ -1,0 +1,84 @@
+:root {
+  /* Colors */
+  --color-bg: #121212;
+  --color-bg-elevated: #1a1a1a;
+  --color-panel: rgba(255, 255, 255, 0.04);
+  --color-panel-hover: rgba(255, 255, 255, 0.06);
+  --color-panel-featured: linear-gradient(145deg, #1a3d1a 0%, #0d1f0d 40%, #121212 100%);
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.55);
+  --color-text-subtle: rgba(255, 255, 255, 0.35);
+  --color-accent: #39ff14;
+  --color-accent-soft: #2dd412;
+  --color-accent-dark: #1a8f0a;
+  --color-accent-glow: rgba(57, 255, 20, 0.25);
+  --color-accent-glow-strong: rgba(57, 255, 20, 0.45);
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-line-accent: rgba(57, 255, 20, 0.3);
+
+  /* Gradients */
+  --gradient-glow-top: radial-gradient(
+    ellipse 80% 60% at 85% 15%,
+    rgba(57, 255, 20, 0.18) 0%,
+    transparent 60%
+  );
+  --gradient-glow-bottom: radial-gradient(
+    ellipse 70% 50% at 10% 90%,
+    rgba(26, 143, 10, 0.15) 0%,
+    transparent 55%
+  );
+  --gradient-progress: linear-gradient(90deg, var(--color-accent-dark), var(--color-accent));
+
+  /* Typography */
+  --font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-size-xs: clamp(0.65rem, 1.2vw, 0.75rem);
+  --font-size-sm: clamp(0.8rem, 1.4vw, 0.9rem);
+  --font-size-base: clamp(0.9rem, 1.6vw, 1.05rem);
+  --font-size-md: clamp(1rem, 1.8vw, 1.2rem);
+  --font-size-lg: clamp(1.2rem, 2.2vw, 1.5rem);
+  --font-size-xl: clamp(1.5rem, 3vw, 2rem);
+  --font-size-2xl: clamp(2rem, 4.5vw, 3.2rem);
+  --font-size-3xl: clamp(2.4rem, 5.5vw, 4rem);
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --letter-spacing-tight: -0.04em;
+  --letter-spacing-wide: 0.12em;
+  --line-height-tight: 1.05;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.55;
+
+  /* Spacing & Layout */
+  --slide-padding-x: clamp(1.25rem, 5vw, 4.5rem);
+  --slide-padding-y: clamp(1rem, 3vh, 2rem);
+  --slide-header-height: 3.5rem;
+  --slide-footer-height: 4rem;
+  --content-max-width: 1200px;
+  --grid-gap: clamp(0.75rem, 2vw, 1.5rem);
+  --card-radius: clamp(16px, 2vw, 24px);
+  --card-padding: clamp(1rem, 2vw, 1.5rem);
+  --pill-radius: 999px;
+
+  /* Animation */
+  --transition-fast: 200ms ease;
+  --transition-base: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-offset: 20px;
+
+  /* Z-index */
+  --z-decor: 0;
+  --z-content: 1;
+  --z-header: 10;
+  --z-nav: 20;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-base: 0ms;
+    --transition-slow: 0ms;
+    --animation-offset: 0px;
+  }
+}

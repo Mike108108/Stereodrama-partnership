@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  width: 100%;
+}
+
+.track {
+  flex: 1;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--pill-radius);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: var(--gradient-progress);
+  border-radius: var(--pill-radius);
+  transition: width var(--transition-slow);
+  box-shadow: 0 0 12px var(--color-accent-glow);
+}
+
+.label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-subtle);
+  letter-spacing: var(--letter-spacing-wide);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 3.5rem;
+  text-align: right;
+}

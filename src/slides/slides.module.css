@@ -1,0 +1,98 @@
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text);
+  margin-bottom: clamp(0.75rem, 2vh, 1.25rem);
+}
+
+.subtitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin-bottom: clamp(1rem, 2.5vh, 1.75rem);
+}
+
+.text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+}
+
+.takeaway {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  margin-top: clamp(1rem, 2.5vh, 1.75rem);
+  line-height: var(--line-height-normal);
+}
+
+.takeaway::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--gradient-progress);
+  margin-right: 0.75rem;
+  vertical-align: middle;
+  border-radius: 1px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--pill-radius);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-line);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.pillGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.animated {
+  opacity: 0;
+  transform: translateY(var(--animation-offset));
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+.animatedVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadeOnly {
+  transform: translateY(var(--animation-offset));
+}
+
+.fadeOnly.animatedVisible {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated {
+    transform: none;
+  }
+
+  .fadeOnly,
+  .fadeOnly.animatedVisible {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--font-size-2xl);
+  }
+}

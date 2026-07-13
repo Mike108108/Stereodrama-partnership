@@ -1,0 +1,30 @@
+.card {
+  background: var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  backdrop-filter: blur(12px);
+  transition:
+    border-color var(--transition-base),
+    background var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--color-line-accent);
+  background: var(--color-panel-hover);
+}
+
+.featured {
+  background: var(--color-panel-featured);
+  border-color: var(--color-line-accent);
+  box-shadow:
+    0 0 40px rgba(57, 255, 20, 0.08),
+    inset 0 1px 0 rgba(57, 255, 20, 0.1);
+}
+
+.featured:hover {
+  border-color: rgba(57, 255, 20, 0.5);
+  box-shadow:
+    0 0 50px rgba(57, 255, 20, 0.12),
+    inset 0 1px 0 rgba(57, 255, 20, 0.15);
+}

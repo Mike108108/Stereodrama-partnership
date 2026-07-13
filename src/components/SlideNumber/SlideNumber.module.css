@@ -1,0 +1,23 @@
+.number {
+  display: flex;
+  align-items: baseline;
+  gap: 0.15rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-text-subtle);
+  font-variant-numeric: tabular-nums;
+}
+
+.current {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-semibold);
+}
+
+.separator {
+  opacity: 0.4;
+}
+
+.total {
+  opacity: 0.6;
+}
