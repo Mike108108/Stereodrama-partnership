@@ -69,12 +69,15 @@
     overscroll-behavior-y: contain;
     overscroll-behavior-x: none;
     justify-content: flex-start;
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 
-  .content > * {
+  .contentInner {
+    flex: 0 0 auto;
+    align-self: stretch;
     height: auto;
     min-height: 0;
+    margin-bottom: 60px;
   }
 
   .footer {
@@ -83,21 +86,28 @@
     justify-content: stretch;
     padding-bottom: env(safe-area-inset-bottom, 0);
     background: transparent;
-    border: none;
+    border: 0;
     box-shadow: none;
   }
 
   .controlBlock {
     width: 100%;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .controlSurface {
+    width: 100%;
     padding-top: 15px;
     padding-left: clamp(0.75rem, 3vw, 1rem);
     padding-right: clamp(0.75rem, 3vw, 1rem);
     padding-bottom: 0.75rem;
-    border: 1px solid color-mix(in srgb, var(--color-presentation-accent) 32%, transparent);
     border-radius: var(--card-radius);
+    border: 1px solid color-mix(in srgb, var(--color-presentation-accent) 32%, transparent);
     background: rgba(255, 255, 255, 0.02);
+    background-clip: padding-box;
     box-shadow:
-      0 0 14px color-mix(in srgb, var(--color-presentation-accent) 12%, transparent),
       inset 0 0 16px color-mix(in srgb, var(--color-presentation-accent) 3%, transparent);
   }
 

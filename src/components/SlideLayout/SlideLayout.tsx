@@ -55,7 +55,7 @@ export function SlideLayout({
       </header>
 
       <main ref={contentRef} className={styles.content}>
-        {children}
+        <div className={styles.contentInner}>{children}</div>
       </main>
 
       <footer className={styles.footer}>
@@ -63,15 +63,17 @@ export function SlideLayout({
           <ProgressBar current={slideNumber} total={totalSlides} />
         </div>
         <div className={styles.controlBlock}>
-          <Navigation
-            currentIndex={currentIndex}
-            total={totalSlides}
-            onGoTo={onGoTo}
-            onNext={onNext}
-            onPrev={onPrev}
-            canGoNext={canGoNext}
-            canGoPrev={canGoPrev}
-          />
+          <div className={styles.controlSurface}>
+            <Navigation
+              currentIndex={currentIndex}
+              total={totalSlides}
+              onGoTo={onGoTo}
+              onNext={onNext}
+              onPrev={onPrev}
+              canGoNext={canGoNext}
+              canGoPrev={canGoPrev}
+            />
+          </div>
         </div>
       </footer>
     </section>
